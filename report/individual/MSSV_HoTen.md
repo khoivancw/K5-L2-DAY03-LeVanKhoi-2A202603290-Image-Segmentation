@@ -2,9 +2,9 @@
 
 **Cách dùng:** Thay mọi dấu `…` bằng bài làm thật của bạn trước khi nộp link fork trên [LMS](https://aithucchien.vinuni.edu.vn). Giữ nguyên bốn mục và bảng để coach đọc nhanh. Viết ngắn, cụ thể theo ảnh/vùng; không cần thuật ngữ chuyên sâu. Ví dụ trong [hướng dẫn mẫu](../../reports/REPORT_TEMPLATE.md) chỉ giúp hiểu cách điền, không phải câu trả lời để chép lại.
 
-- Mã học viên theo lớp: 2A202603290
-- Ngày / CVAT local: 11/11/2026 / CVAT local v2.74.1 (localhost:8080)
-- Công cụ đã dùng: CVAT 2.74.1 (Polygon, Brush), YOLOv8x-seg, SegFormer (Cityscapes b0), Python inspect_submissions.py, CUDA (NVIDIA GeForce RTX 4050 Laptop GPU)
+- Mã học viên theo lớp: …
+- Ngày / CVAT local: …
+- Công cụ đã dùng: …
 
 Mã học viên là mã lớp cấp; không cần ghi họ tên trong report nếu kênh [LMS](https://aithucchien.vinuni.edu.vn) đã nhận diện bạn. Chỉ ghi công cụ thật sự đã dùng; không có SAM vẫn làm bài bình thường.
 
@@ -14,15 +14,15 @@ Ghi tên ZIP đúng như file trong `submissions/` và số ảnh đã vẽ, Sav
 
 | Task | File ZIP đúng tên | Hoàn thành mấy ảnh | Điểm tối đa (coach chấm sau) |
 | --- | --- | ---: | ---: |
-| easy_semantic | easy_semantic.zip | 3 / 3 | 20 |
-| medium_instance | medium_instance.zip | 3 / 3 | 32 |
-| hard_panoptic | hard_panoptic.zip | 2 / 2 | 30 |
-| cp1_holes | cp1_holes.zip | 1 / 1 | 3 |
-| cp2_slice | cp2_slice.zip | 1 / 1 | 3 |
-| cp5_occlusion | cp5_occlusion.zip | 1 / 1 | 3 |
-| cp3_thin | cp3_thin.zip | 1 / 1 | 3 |
-| cp4_curb | cp4_curb.zip | 1 / 1 | 3 |
-| cp6_coverage | cp6_coverage.zip | 1 / 1 | 3 |
+| easy_semantic | … | … / 3 | 20 |
+| medium_instance | … | … / 3 | 32 |
+| hard_panoptic | … | … / 2 | 30 |
+| cp1_holes | … | … / 1 | 3 |
+| cp2_slice | … | … / 1 | 3 |
+| cp5_occlusion | … | … / 1 | 3 |
+| cp3_thin | … | … / 1 | 3 |
+| cp4_curb | … | … / 1 | 3 |
+| cp6_coverage | … | … / 1 | 3 |
 | **Tổng tối đa** | | | **100** |
 
 Nếu export lỗi, ghi task, dữ liệu đã Save đến đâu và lỗi đã báo coach.
@@ -31,22 +31,22 @@ Nếu export lỗi, ghi task, dữ liệu đã Save đến đâu và lỗi đã 
 
 Chọn object đầu tiên bạn tự vẽ ở `medium_instance`, trước khi xem bất kỳ đề xuất tự động nào cho object đó. Ghi ảnh/vị trí đủ để tìm lại; “quy tắc biên” là lý do bạn chọn hoặc dừng mask ở ranh đó.
 
-- Ảnh, vị trí và object Medium đầu tiên tự vẽ: Ảnh `000000181542.jpg`, người phụ nữ mặc áo dài trắng đi bộ qua đường ở chính giữa ngã tư (`PERSON 1 (MANUAL)`).
-- Class và quy tắc tôi dùng để chọn biên: Class `person`. Quy tắc biên: Chỉ bao trọn phần cơ thể nhìn thấy thực tế (đầu tóc, bờ vai, tà áo dài, ống quần và giày dép); dừng biên sát mép tà áo dài phủ trên ghi-đông và lốc máy chiếc xe máy đằng sau, tuyệt đối không vẽ lấn sang phần kim loại của xe máy và không ăn theo bóng đổ trên vạch qua đường.
-- Nếu dùng gợi ý sau đó: vùng gợi ý sai/đúng, hành động sửa/giữ và lý do: Mô hình gợi ý tự động nhận diện xe máy `motorcycle 15` phía sau người phụ nữ nhưng bị thân người phụ nữ che khuất chia thành hai mảng rời (bánh trước và đuôi xe). Ban đầu có xu hướng bị tách thành hai object khác nhau hoặc ăn lấn vào tà áo dài. Hành động: Giữ chiếc xe máy thành một instance duy nhất (multi-polygon) theo quy tắc che khuất (occlusion), và loại bỏ phần mask xe lấn vào tà áo dài của người phụ nữ.
+- Ảnh, vị trí và object Medium đầu tiên tự vẽ: …
+- Class và quy tắc tôi dùng để chọn biên: …
+- Nếu dùng gợi ý sau đó: vùng gợi ý sai/đúng, hành động sửa/giữ và lý do: …
 - Nếu không dùng gợi ý: ghi “không dùng”; vẫn giải thích một quyết định gán nhãn của mình.
 
 ## 3. Một lỗi tôi tìm thấy và sửa
 
 Chọn một lỗi **có thật** trong bài. Nếu công cụ lỗi khiến bạn chưa sửa được, ghi rõ đã thử gì và cần coach hỗ trợ gì; không ghi “đã sửa” khi chưa sửa.
 
-- Task/ảnh/vùng: Task `medium_instance`, ảnh `000000181542.jpg`, vùng chiếc xe máy đi ngang qua ngã tư bị người phụ nữ áo dài trắng che khuất phần giữa thân xe (`motorcycle 15`).
-- Lỗi thuộc loại: sai lớp / thiếu-thừa vật / gộp-tách / biên / phủ vùng / khác: Lỗi gộp-tách và che khuất (occlusion).
-- Bằng chứng tôi nhìn thấy: Xe máy bị thân người phụ nữ chắn ngang ở giữa. Bánh trước/phuộc trước nằm bên phải, đuôi xe/bánh sau nằm bên trái. Mô hình tự động có xu hướng gán thành 2 ID xe máy riêng rẽ (gây đếm thừa xe) hoặc vẽ một đường đa giác nối thẳng xuyên qua người phụ nữ.
-- Quy tắc và hành động sửa: Theo quy tắc occlusion của bài lab (vật bị che khuất chia nhiều mảng nhìn thấy vẫn là 1 instance). Đã gom hai cụm đa giác trước và sau vào cùng một `annotation` của chiếc xe máy đó, đồng thời chỉnh biên tách bạch rõ ràng khỏi viền áo dài của người đi bộ.
-- Sau sửa đã Save và export lại chưa? Đã kiểm tra lại trực quan trên CVAT local và export lại thành file `medium_instance.zip` chuẩn COCO 1.0.
+- Task/ảnh/vùng: …
+- Lỗi thuộc loại: sai lớp / thiếu-thừa vật / gộp-tách / biên / phủ vùng / khác: …
+- Bằng chứng tôi nhìn thấy: …
+- Quy tắc và hành động sửa: …
+- Sau sửa đã Save và export lại chưa? …
 
-Nếu bạn **đã xem Summary tự đánh giá trên GitHub Actions hoặc tự chạy script**, ghi ngắn một kết quả liên quan lỗi vừa sửa (ví dụ task, metric trước/sau nếu có): Đã chạy script kiểm tra `python scripts/inspect_submissions.py --dir submissions` và đạt kết quả `[OK] medium_instance: medium_instance.zip (annotations: 82 {'polygon': 82})` không còn lỗi schema hay trùng lặp ID. Scorecard ba tier tối đa **82**, không phải điểm cuối trên 100. Không tự ghi PASS/top 3/bonus; người phụ trách xác nhận theo tiêu chí lớp. Không đưa file ground truth vào fork.
+Nếu bạn **đã xem Summary tự đánh giá trên GitHub Actions hoặc tự chạy script**, ghi ngắn một kết quả liên quan lỗi vừa sửa (ví dụ task, metric trước/sau nếu có): … / chưa có điểm. Scorecard ba tier tối đa **82**, không phải điểm cuối trên 100. Không tự ghi PASS/top 3/bonus; người phụ trách xác nhận theo tiêu chí lớp. Không đưa file ground truth vào fork.
 
 ## 4. Ba ca chưa chắc hoặc đã cân nhắc
 
@@ -54,102 +54,6 @@ Mỗi ca là một **vùng cụ thể** khiến bạn phải cân nhắc hai cá
 
 | Ảnh/vị trí | Hai cách hiểu có thể | Quy tắc/chứng cứ | Quyết định hoặc câu hỏi cho coach |
 | --- | --- | --- | --- |
-| 1. `cp4_curb`: ảnh `7d83710e-4697c3b2.jpg`, khu vực mép vỉa hè giao cắt lòng đường | (A) Chọn ranh theo màu sắc bề mặt bê tông/nhựa đường vs (B) Chọn ranh theo độ gờ nổi của bó vỉa phân định chức năng lưu thông | Phiếu quy tắc Day 3: Ranh road-sidewalk xác định theo chức năng và gờ bó vỉa, không chỉ nhìn màu nhựa đường | Quyết định: Bám theo mép gờ bó vỉa nổi lên; phần trên vỉa hè gán `sidewalk`, phần lòng đường hạ thấp gán `road`. |
-| 2. `cp1_holes`: ảnh `000000144300.jpg`, ô cửa kính xe buýt nhìn xuyên thấu ra cảnh vật bên ngoài | (A) Khoét lỗ (cut hole) phần kính vì nhìn thấy background phía sau vs (B) Giữ nguyên toàn bộ kính xe bên trong mask của xe buýt | Quy tắc trạm cp1_holes: Kính/khe nằm trong mask vật, không khoét tùy tiện làm rỗng thân xe | Quyết định: Vẽ bao phủ toàn bộ ô kính và khung sườn thành một thể thống nhất trong mask `bus`. |
-| 3. `cp3_thin`: ảnh `839f7736-abe28069.jpg`, các cột đèn/cột biển báo (`pole`) có bề ngang 2-3px ở xa | (A) Bỏ qua vì quá mảnh khó nhìn rõ ở độ phân giải thường vs (B) Phóng to tối đa (zoom in) và dùng brush mảnh 2-3px để tô | Quy tắc trạm cp3_thin: Nét mảnh/cột/biển cần zoom lớn và dùng brush 2-3px để giữ kết nối không bị đứt đoạn | Quyết định: Phóng to vùng ảnh, vẽ nối liên tục theo trục thẳng đứng của thân cột với class `pole`. |
-
----
-
-## 5. Phụ lục kỹ thuật: Hướng dẫn chi tiết cài đặt và quy trình kết hợp AI (CVAT & Pipeline)
-
-### 5.1. Kiến trúc hệ thống
-Hệ thống kết hợp giữa **Giao diện gán nhãn tương tác (CVAT Local)** và **Đường ống tự động hoá (Auto-Annotation Pipeline)**:
-- **CVAT Local (v2.74.1)**: Chạy trên nền Docker Desktop với các container chuẩn: `cvat_server`, `cvat_ui`, `cvat_db` (Postgres), `redis`, `traefik` (cổng 8080).
-- **Nuclio Serverless & Port Bridge**: Quản lý các function mô hình AI (như SAM, YOLOv7) lắng nghe qua port nội bộ, được hỗ trợ bởi daemon `nuclio_port_bridge.py` để điều hướng port động tránh đứt kết nối `host.docker.internal`.
-- **Mô hình AI gia tốc phần cứng**: Sử dụng GPU **NVIDIA GeForce RTX 4050 Laptop** (CUDA 12.4):
-  - `yolov8x-seg.pt` (SOTA Instance Segmentation): Khả năng nhận diện và xuất toạ độ đa giác ôm sát viền cho 80 lớp COCO (người, xe, đèn giao thông).
-  - `SegFormer-b0-finetuned-cityscapes` (Semantic / Panoptic Stuff): Phân vùng chính xác các lớp nền diện tích lớn và nét mảnh (`road`, `sidewalk`, `building`, `vegetation`, `sky`, `pole`).
-
-### 5.2. Các bước cài đặt từ đầu
-
-#### Bước 1 — Khởi động CVAT Local bằng Docker
-1. Mở Docker Desktop trên máy.
-2. Mở terminal tại thư mục mã nguồn CVAT và chạy lệnh:
-   ```powershell
-   docker compose up -d
-   ```
-3. Truy cập trình duyệt tại `http://localhost:8080`, đăng nhập tài khoản quản trị.
-
-#### Bước 2 — Chuẩn bị môi trường Python cho AI Pipeline
-1. Tạo môi trường ảo và cài đặt thư viện cần thiết:
-   ```powershell
-   python -m venv venv_ai
-   .\venv_ai\Scripts\activate
-   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
-   pip install ultralytics transformers pycocotools pillow opencv-python
-   ```
-2. Tải sẵn trọng số mô hình:
-   - Mô hình YOLO: tải `yolov8x-seg.pt` (144 MB) để nhận diện đồ vật nét nhất.
-   - Mô hình SegFormer: tải checkpoint `nvidia/segformer-b0-finetuned-cityscapes-1024-1024` tự động qua HuggingFace.
-
-#### Bước 3 — Cài đặt và tích hợp SAM vào CVAT (Tuỳ chọn Interactive AI)
-1. Cài đặt công cụ dòng lệnh `nuctl` của Nuclio.
-2. Deploy mô hình Segment Anything (SAM ViT-H):
-   ```powershell
-   nuctl deploy --project-name cvat `
-     --path components/serverless/pytorch/facebookresearch/sam/vit_h `
-     --volume "C:/models:/opt/nuclio/models" `
-     --platform local
-   ```
-3. Khởi chạy bridge chuyển tiếp port để CVAT nhận diện SAM tại `host.docker.internal`.
-
-### 5.3. Hướng dẫn cách dùng và nguyên lý "Vẽ cái to trước, cái nhỏ dùng AI"
-
-Quy trình chuẩn tối ưu năng suất lao động:
-
-```
-                  ┌──────────────────────────────────────────────┐
-                  │           BỨC ẢNH ĐẦU VÀO (INPUT)            │
-                  └──────────────────────┬───────────────────────┘
-                                         │
-                 ┌───────────────────────┴───────────────────────┐
-                 ▼                                               ▼
-     [VÙNG RỘNG LỚN (STUFF)]                         [CHI TIẾT NHỎ (THINGS)]
-(Đường, Vỉa hè, Bầu trời, Tòa nhà)             (Người đi bộ, Xe máy, Xe hơi, Biển báo)
-                 │                                               │
-   ► Hình học đơn giản, mảng lớn                   ► Viền lượn sóng, zíc zắc phức tạp
-   ► Người vẽ tay bằng Polygon / Brush             ► Dùng AI (YOLO-seg / SAM) bắt viền
-   ► Chỉ mất 3-4 cú click là phủ kín               ► Tự động tạo đa giác chuẩn từng pixel
-                 │                                               │
-                 └───────────────────────┬───────────────────────┘
-                                         │
-                                         ▼
-                 ┌──────────────────────────────────────────────┐
-                 │          CON NGƯỜI KIỂM DUYỆT (QC)           │
-                 │  - Cắt bỏ bóng đổ (Negative click)           │
-                 │  - Không khoét lỗ kính xe (cp1_holes)        │
-                 │  - Tách xe dính sát nhau (cp2_slice)         │
-                 │  - Gộp xe bị che khuất (cp5_occlusion)       │
-                 └──────────────────────┬───────────────────────┘
-                                         │
-                                         ▼
-                 ┌──────────────────────────────────────────────┐
-                 │     XUẤT BẢN & VERIFY (100/100 CONTRACT)     │
-                 │     Export COCO 1.0 / Segmentation Mask      │
-                 └──────────────────────────────────────────────┘
-```
-
-#### Quy trình thao tác cụ thể:
-1. **Gán nhãn vùng to (Stuff)**:
-   - Dùng **Polygon tool** trong CVAT: Click 4-5 điểm bao trọn bầu trời (`sky`) hoặc mặt đường (`road`). Vẽ các vùng này trước vì diện tích lớn, biên phẳng, không tốn thời gian.
-2. **Gán nhãn vật thể nhỏ (Things) bằng AI**:
-   - *Cách 1 (Tương tác trên CVAT)*: Chọn biểu tượng **Magic Wand (AI Tools)** → chọn **Segment Anything** → Click chuột trái (Điểm xanh) vào giữa người/xe để AI bắt viền; nếu AI ăn lấn sang bóng đổ hoặc xe khác thì click chuột phải (Điểm đỏ) để loại trừ.
-   - *Cách 2 (Batch Auto-Annotation bằng script)*: Chạy script (`python scripts/solve_hard_panoptic.py`), script quét toàn bộ thư mục ảnh bằng GPU, tự động tính toán toạ độ và tạo file ZIP nộp bài chuẩn quy cách.
-3. **Kiểm tra trên CVAT và Xuất bản (Export)**:
-   - Vào Job trên CVAT, chọn **Actions → Upload annotations** nạp file ZIP vào để nhìn trực quan toàn bộ các lớp mask.
-   - Kiểm tra kỹ các trường hợp biên và che khuất, bấm **Save**, sau đó xuất dataset đúng định dạng (`COCO 1.0` cho instance/panoptic, `Segmentation mask 1.1` cho semantic).
-   - Chạy script kiểm tra hợp đồng:
-     ```powershell
-     python scripts/inspect_submissions.py --dir submissions
-     ```
-     Đảm bảo toàn bộ 9 task đều hiển thị `[OK]`.
+| 1 | … | … | … |
+| 2 | … | … | … |
+| 3 | … | … | … |
